@@ -1,12 +1,9 @@
 import streamlit as st
 import numpy as np 
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn import metrics
+
 
 # Create a list of pages
 pages = ['Introduction to dataset','Cleaning of dataset','Descriptive Analysis','Prediction of Salary']
