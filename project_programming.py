@@ -1,12 +1,3 @@
-import streamlit as st
-import numpy as np 
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-import plotly.express as px
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn import metrics
 
 # Create a list of pages
 pages = ['Introduction to dataset','Cleaning of dataset','Descriptive Analysis','Prediction of Salary']
@@ -48,14 +39,14 @@ elif page == 'Cleaning of dataset':
     # title
     st.title('Cleaning Methods')
     # Using pandas to read the Excel file
-    df = pd.read_excel("C:\\Users\\goela\\OneDrive\\Documents\\streamlit\\Salary_Prediction_Classification.xlsx")
+    df = pd.read_excel("Salary_Prediction_Classification.xlsx")
     # initial dataset
     st.markdown('### **Loading Uncleaned Dataset :**')
     # Displaying the DataFrame
     st.write(df)
     st.code("""
 # Initial dataset
-df = pd.read_excel("C:\\Users\\goela\\OneDrive\\Documents\\streamlit\\Salary_Prediction_Classification.xlsx")
+df = pd.read_excel("Salary_Prediction_Classification.xlsx")
 """, language='python')
     # Getting dimension
     st.markdown('### **Dataset Dimensions :**')
@@ -187,7 +178,7 @@ elif page == 'Descriptive Analysis':
     # The title 
     st.title('Descriptive Analysis: Unveiling the Secrets of our Data')
     # Read the CSV data file
-    df = pd.read_csv('C:\\Users\\goela\\OneDrive\\Documents\\streamlit\\Cleaned_data.csv')
+    df = pd.read_csv('Cleaned_data.csv')
     # using the final df we have cleaned
     st.markdown('### Basic Statistics')
     st.write(df.describe())
@@ -240,7 +231,7 @@ elif page == 'Prediction of Salary':
     st.title('Prediction of Salary')
     st.markdown('This section will use basic stats model to predict salary per annum based on the cleaned and analyzed data.')   
     # Reading the CSV data file
-    df = pd.read_csv('C:\\Users\\goela\\OneDrive\\Documents\\streamlit\\Cleaned_data.csv')
+    df = pd.read_csv('Cleaned_data.csv')
     # Function to create dropdown widgets for each column
     def create_dropdown_widget(column_name):
         values = ['All'] + df[column_name].unique().tolist()
