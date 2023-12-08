@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
+import openpyxl
 
 # Create a list of pages
 pages = ['Introduction to dataset','Cleaning of dataset','Descriptive Analysis','Prediction of Salary']
